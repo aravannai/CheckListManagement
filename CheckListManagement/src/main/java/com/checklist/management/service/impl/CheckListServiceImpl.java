@@ -19,13 +19,11 @@ public class CheckListServiceImpl implements CheckListService {
 	
 	@Override
 	public List<CheckList> retrieveAllCheckList() {
-		// TODO Auto-generated method stub
 		return checkListRepository.findAll();
 	}
 
 	@Override
 	public CheckList retrieveCheckList(Integer id) {
-		// TODO Auto-generated method stub
 		Optional<CheckList> optionalCheckList =  checkListRepository.findById(id);
 		
 		if(optionalCheckList.isPresent()==false)
@@ -38,7 +36,6 @@ public class CheckListServiceImpl implements CheckListService {
 
 	@Override
 	public CheckList createCheckList(CheckList checklist) {
-		// TODO Auto-generated method stub
 		return checkListRepository.save(checklist);
 	}
 
